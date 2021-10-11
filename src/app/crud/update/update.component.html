@@ -1,0 +1,21 @@
+<div><h1>update Product</h1></div>
+       {{tamil}}
+       <form [formGroup]="productForm" (ngSubmit)="submitForm()" novalidate>
+     <div class="form-group">
+        <label>Id</label>
+        <input type="number" formControlName="id" class="form-control" value="{{id}}" >
+
+    </div> 
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="Name" class="form-control" value="{{Name}}"  >
+
+    </div>
+    <div class="form-group">
+        <label>Role</label>
+        <input type="text" formControlName="Role" class="form-control" placeholder="{{Role}}">
+    </div>
+    
+    <button type="submit">update</button>
+</form>     
+ 

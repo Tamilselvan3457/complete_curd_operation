@@ -1,0 +1,36 @@
+<div>
+    <h1>My Products</h1>
+    
+    
+      <a class="button" routerLink="/crud/create/">create</a>  
+     <!-- <button type="button" [routerLink]="/crud/create/">Create new product</button> -->
+      <table>
+        <thead>
+            <tr>
+
+                <th>Id</th>
+                <th> Name</th>
+                <th>Role</th>
+                <th>Action</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.Name}}</td>
+                <td>{{product.Role}}</td>
+                
+                <td>
+                     <!-- <button type="button" (click)="getElement(product.id)" routerLink="/crud/update/', product.id"  >updatecheck</button>  --> 
+                     <!-- <a class="button" routerLink="'/crud/update/',product.id">update</a>    -->
+                    <!-- <a class="button" routerLink="/crud/delete/', product.id">delete</a>  -->
+                      <button type="button" [routerLink]="['/crud/update/', product.id]">Update</button>
+                      <!-- <button type="button" (click)=crudService.delete(product.id)>Remove</button>  -->
+                        <button type="button" (click)="deletenumber(product.id)" >deletecheck</button> 
+            </tr>
+        </tbody>
+       
+    </table>  
+</div>
+
